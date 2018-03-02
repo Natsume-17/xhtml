@@ -1,0 +1,294 @@
+﻿/* Selector universal para resetear márgenes y padding en los navegadores */
+* {
+	padding: 0;
+	margin: 0;
+}
+/* Estilos selector genérico para la caja más al fondo del documento */
+html {
+	background-color: #123;
+}
+/* Estilos del cuerpo del documento */
+body {
+	background-color: #cdc;
+	width: 90%;
+	font-size: 1.1em;
+	margin: 25px auto;
+	border: 1px #000 solid;
+}
+/* Estilos para el elemento con id 'login' */
+#login {
+	background-color: rgba(25, 50, 75, 0.70);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 0.75%;
+}
+/* Estilos para input, dentro del elemento con id 'login', cuyo atributo type contiene 'box' */
+#login input[type*="box"] {
+	margin: 0 15px;
+}
+/* Estilos para input, dentro del elemento con id 'login', cuyos atributos type sean los definidos */
+#login input[type="email"], #login input[type="password"] {
+	margin: 0 7.5px;
+	padding: 2.5px 5px;
+	border: 1px #990099 dotted;
+	border-radius: 12.5px;
+}
+/* Estilos para input, dentro del elemento co id 'login', cuyo atributo sea el definido */
+#login input[type="submit"] {
+	font: bold 0.75em calibri, arial, sans-serif;
+	color: #fff;
+	background: #060B73;
+	background: linear-gradient(to bottom, #060B73 0%, #1C6EA4 60%, #516BC5 100%);
+	margin: 0 5px;
+	padding: 2.5px 5px;
+}
+/* Estilos para elemento con id 'header' */
+#header {
+	background-color: #aaa;
+	width: 85%;
+	text-align: center;
+	border: 1px #000 solid;
+	margin: 5px auto;
+}
+/* Estilos aplicados antes del h2 dentro del elemento con id 'header' */
+#header h2::before {
+	content: "\00AB";
+	margin-right: 5px;
+}
+/* Estilos aplicados después del h2 dentro del elemento con id 'header */
+#header h2::after {
+	content: "\00BB";
+	margin-left: 5px;
+}
+/* Estilos para elemento con id 'nav' */
+#nav {
+	background-color: #ccc;
+	width: 85%;
+	text-align: center;
+	border: 1px #000 solid;
+	margin: 15px auto;
+}
+/* Estilos para elemento con id 'aside' */
+#aside {
+	background-color: #fff;
+	width: 22.5%;
+	height: 400px;
+	margin: 10px 0 5px 7.5%;
+	border: 1px #000 solid;
+	float: left;
+}
+/* Estilos para las celdas de tabla dentro del elemento con id 'aside' */
+#aside table td {
+	text-align: center;
+	font: normal 0.85em helvetica, calibri, sans-serif;
+}
+/* Estilos para elementos con clase 'section' */
+.section {
+	background-color: #fff;
+	width: 60%;
+	text-align: center;
+	border: 1px #000 solid;
+	margin: 10px 7.5% 5px 0;
+	float: right;
+}
+/* Estilos para el elemento con id 'footer' */
+#footer {
+	width: 85%;
+	background-color: #ccc;
+	text-align: center;
+	font: normal 0.8em helvetica, calibri, sans-serif;
+	border: 1px #000 solid;
+	margin: 15px auto;
+	padding: 10px 0;
+	clear: both;
+}
+/* Estilos aplicados antes y después del elemento small dentro del elemento con id 'footer' */
+#footer small::before, #footer small::after {
+	content: "\2605";
+	color: #129;
+	background-color: #fff;
+	margin: 0 7.5px;
+	font-size: 1.25em;
+}
+/* Estilos para imagen, dentro del elemento con id 'header', cuyo atributo src termina con 'jpg' */
+#header img[src$="jpg"] {
+	border: 2px #000 solid;
+	border-radius: 15px/35px;
+	box-shadow: 5px 5px 5px rgba(25, 50, 75, 0.5);
+	width: 25%;
+	height: 25%;
+	margin: 15px 0;
+}
+/* Estilos para imágenes dentro de tabla dentro de elementos con clase 'section' */
+.section table tr td img {
+	margin: 15px 0;
+	border: 1px #000 solid;
+	border-radius: 12.5px;
+	width: 40%;
+	box-shadow: 5px 5px 5px rgba(25, 50, 75, 0.5);
+	transition: transform 0.3s ease-in-out 200ms;
+}
+/* Estilo aplicado a posar el puntero sobre las imágenes dentro de las tablas de los elementos con clase 'section' */
+.section table tr td img:hover {
+	transform: scale(1.2);
+}
+/* Estilos para párrafos dentro de tabla dentro de elementos con clase 'section' */
+.section table tr td p {
+	font: normal 0.85em calibri, helvetica, sans-serif;
+	margin: 5px 0;
+	text-align: center;
+}
+/* Estilos para elementos li */
+li {
+	margin: 5px 25px;
+}
+/* Estilos para elementos li con clase 'lista' */
+li.lista {
+	display: inline-block;
+	margin: 5px auto;
+	padding: 7.5px 0;
+}
+/* Estilos aplicados a enlaces, dentro de li con clase 'lista', cuyo atributo href empieza por 'https://' */
+li.lista a[href^="https://"] {
+	background-color: #129;
+	border-radius: 15px;
+	padding: 7.5px 15px;
+	margin: 0 35px;
+	box-shadow: 2.5px 2.5px 2.5px rgba(25, 50, 75, 0.5);
+}
+/* Estilos aplicados a imágenes dentro de enlaces, dentro de li con clase 'lista', cuyo atributo alt empieza por 'Icono' */
+li.lista a img[alt^="Icono"] {
+	padding: 0 10px 0 0;
+	margin: 0;
+}
+/* Carga una Google Font */
+@font-face {
+	font-family: 'Orbitron';
+	src: url(https://fonts.gstatic.com/s/orbitron/v9/yMJRMIlzdpvBhQQL_Qq7dy0.woff2);
+}
+/* Estilos para encabezados h1, siendo hijo del elemento con id 'header' */
+#header > h1 {
+	font: bold 5.8em 'Orbitron', calibri, sans-serif;
+	color: #128;
+	margin: 5px;
+}
+/* Estilos para encabezados h2 */
+h2 {
+	font: normal 1.4em candara, arial, sans-serif;
+	color: #126;
+	margin: 10px;
+	text-align: center;
+}
+/* Estilos para tablas */
+table {
+	background-color: #abc;
+	border: 1px #000 solid;
+	padding: 0;
+	margin: 20px auto;
+}
+/* Estilos para la tabla dentro del elemento con id 'aside' */
+#aside table {
+	width: 70%;
+}
+#aside table td {
+	border: 1px #000 solid;
+	box-shadow: 1px 1px 1px rgba(25, 50, 75, 0.5);
+}
+/* Estilos para tablas dentro de elementos con clase 'section' */
+.section table {
+	width: 90%;
+	border-radius: 10px;
+	box-shadow: inset 5px 5px 5px rgba(25, 50, 75, 0.5);
+}
+/* Estilos para celdas de tablas */
+td {
+	padding: 5px;
+}
+/* Estilos para texto de títulos en tablas (por encima de la propia tabla) */
+caption {
+	margin: 10px 0;
+	font: bold 1.1em georgia, times, serif;
+	color: #124;
+}
+/* Estilos para elementos span */
+span {
+	font-weight: bold;
+}
+/* Estilos para enlaces sin visitar dentro de elementos li con clase 'lista' dentro de lista desordenada dentro de elemento con id 'nav' */
+#nav ul li.lista a:link {
+	color: #fff;
+}
+/* Estilos para enlaces donde se pose el puntero y enlaces visitados dentro de elementos li con clase 'lista' dentro de lista desordenada dentro de
+elemento con id 'nav' */
+#nav ul li.lista a:hover, #nav ul li.lista a:visited {
+	color: #999;
+	padding: 10px 15px;
+	text-decoration: none;
+}
+/* Estilos para párrafos adyacentes a otro p dentro del elemento con id 'contenido' */
+div#contenido p + p {
+	font: normal 1em calibri, helvetica, sans-serif;
+	text-align: justify;
+	margin: 15px auto;
+	padding: 0 15px;
+}
+/* Estilo para el primer párrafo dentro del elemento con id 'contenido' */
+div#contenido p:first-child {
+	font: normal 1em calibri, helvetica, sans-serif;
+	text-align: justify;
+	padding: 0 15px;
+	color: #128;
+	background-color: #fff;
+}
+/* Estilos para la primera línea del primer párrafo dentro del elemento con id 'contenido' */
+div#contenido p:first-child::first-line {
+	text-transform: uppercase;
+}
+/* Estilos para la primera letra del segundo párrafo dentro del elemento con id 'contenido' */
+div#contenido p:nth-child(2)::first-letter {
+	color: #128;
+	float: left;
+	font: bold 4.5em georgia, times, serif;
+	margin: 5px 7.5px 0 0;
+}
+/* Estilos para el último párrafo dentro del elemento con id 'contenido' */
+div#contenido p:last-child {
+	color: #fff;
+	background-color: #128;
+}
+/* Estilos aplicados al añadido antes del h2 dentro del elemento con id 'aside' */
+#aside h2::before {
+	content: "\23A1";
+	margin-right: 7.5px;
+}
+/* Estilos aplicados al añadido después del h2 dentro del elemento con id 'aside' */
+#aside h2::after {
+	content: "\23A6";
+	margin-left: 7.5px;
+}
+/* Estilos aplicados al añadido antes del caption dentro del elemento con id 'porteros' */
+#porteros caption::before {
+	content: "\270B";
+	margin-right: 5px;
+	font-size: 1.5em;
+}
+/* Estilos aplicados al añadido antes del caption dentro del elemento con id 'defensas'*/
+#defensas caption::before {
+	content: "\1F3EF";
+	margin-right: 7.5px;
+	font-size: 1.5em;
+}
+/* Estilos aplicados al añadido antes del caption dentro del elemento con id 'centrocampistas' */
+#centrocampistas caption::before {
+	content: "\1F578";
+	margin-right: 7.5px;
+	font-size: 1.5em;
+}
+/* Estilos aplicados al añadido antes del caption dentro del elemento con id 'delanteros' */
+#delanteros caption::before {
+	content: "\26BD";
+	margin-right: 7.5px;
+	font-size: 1.5em;
+}
